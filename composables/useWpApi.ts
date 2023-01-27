@@ -3,8 +3,6 @@
  * A collection of WordPress composable functions.
  */
 
-// import { Post } from "~~/types/post";
-
 export default () => {
   const config = useRuntimeConfig();
   const WP_URL: string = config.wpApiUrl;
