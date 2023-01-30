@@ -8,7 +8,9 @@ const categoriesWithPosts = categories._value.filter( categoriesValue => {
     return categoriesValue;
   }
 });
-// console.log(resultCategories);
+// console.log(categoriesWithPosts);
+// console.log(typeof(categoriesWithPosts));
+
 
 useHead({
   title: "Categories",

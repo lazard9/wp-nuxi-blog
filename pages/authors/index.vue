@@ -1,14 +1,13 @@
 <script lang="ts" setup>
 import useWpApi from "~~/composables/useWpApi";
 
-const { data: categories } = await useWpApi().getCatgories<any>();
+const { data: authors } = await useWpApi().getAuthors<any>();
 
-const categoriesWithPosts = categories._value.filter( categoriesValue => {
-  if ( categoriesValue.count > 0 ) {
-    return categoriesValue;
-  }
+const filterAuthors = authors._rawValue.filter( filterAuthors => {
+  return filterAuthors;
 });
-// console.log(resultCategories);
+// console.log(filterAuthors);
+// console.log(typeof(filterAuthors));
 
 useHead({
   title: "Categories",
@@ -27,13 +26,13 @@ useHead({
     <!-- Blog Section Starts -->
     <section class="container px-4 py-12">
       <div class="flex flex-wrap gap-5">
-        <span v-for="category in categoriesWithPosts">
+        <span v-for="author in filterAuthors">
           <NuxtLink
-            :key="category.id"
-            :to="`/categories/${category.slug}`"
+            :key="author.id"
+            :to="author.link"
             class="block py-2 px-4 bg-gray-200 hover:bg-gray-300 duration-300 rounded"
           >
-            {{ category.name }}
+            {{ author.name }}
           </NuxtLink>
         </span>
       </div>
