@@ -39,7 +39,7 @@ export default () => {
     return get<T>(`categories?slug=${slug}`);
   };
 
-  // Get a single category
+  // Get all users
   const getAuthors = async <T>(fields: string = "name,slug,count") => {
     return get<T>(`users?per_page=100`);
   };
