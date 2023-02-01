@@ -19,9 +19,7 @@ useHead({
     <section class="container blog py-10 sm:py-16">
       <div class="sm:px-20">
         <!-- Blog Title  -->
-        <h1 class="blog__title text-3xl sm:text-5xl font-bold text-center leading-snug mb-5">
-          {{ post.title.rendered }}
-        </h1>
+        <h1 class="blog__title text-3xl sm:text-5xl font-bold text-center leading-snug mb-5" v-html="post.title.rendered"></h1>
         <!-- Blog Meta  -->
         <div class="flex mb-10 justify-center gap-5">
           <span>Written by: <span class="text-primary-500">{{ post._embedded["author"][0]?.name }}</span></span>
@@ -43,7 +41,7 @@ useHead({
   </main>
 </template>
 
-<style>
+<style lang="scss">
 .blog__content {
   @apply sm:px-10;
 }

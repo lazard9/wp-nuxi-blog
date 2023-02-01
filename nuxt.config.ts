@@ -1,7 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  /*
+   * Headers of the page
+   */
   app: {
-    // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
       title: "Nuxt Test Blog",
       meta: [
@@ -17,6 +19,20 @@ export default defineNuxtConfig({
     },
   },
 
+  /*
+   * Global CSS
+   */
+  css: [],
+
+  /*
+   * Plugins to load before mounting the App
+   */
+
+  plugins: [],
+
+  /*
+   * Nuxt.js modules
+   */
   modules: [
     "@nuxtjs/tailwindcss"
   ],

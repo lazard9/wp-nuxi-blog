@@ -32,7 +32,7 @@ useHead({
         <span v-for="category in categoriesWithPosts">
           <NuxtLink
             :key="category.id"
-            :to="`/categories/${category.slug}`"
+            :to="`/category/${category.slug}`"
             class="block py-2 px-4 bg-gray-200 hover:bg-gray-300 duration-300 rounded"
           >
             {{ category.name }}
@@ -43,7 +43,7 @@ useHead({
     <!-- Blog Section Ends  -->
   </main>
 </template>
-<style>
+<style lang="scss">
 .hero__title {
   @apply text-4xl font-bold;
 }

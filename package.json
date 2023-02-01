@@ -8,7 +8,14 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxtjs/html-validator": "^1.2.3",
     "@nuxtjs/tailwindcss": "^6.2.0",
     "nuxt": "^3.0.0"
+  },
+  "dependencies": {
+    "@nuxtjs/style-resources": "^1.2.1",
+    "node-sass": "^8.0.0",
+    "sass": "^1.58.0",
+    "sass-loader": "^13.2.0"
   }
 }

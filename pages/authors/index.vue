@@ -40,7 +40,7 @@ useHead({
     <!-- Blog Section Ends  -->
   </main>
 </template>
-<style>
+<style lang="scss">
 .hero__title {
   @apply text-4xl font-bold;
 }

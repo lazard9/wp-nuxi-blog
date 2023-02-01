@@ -16,15 +16,11 @@ defineProps<{
       <img :src="image" :alt="imagealt" class="absolute object-cover w-full h-full group-hover:scale-110 duration-300" />
     </div>
     <div class="grid__content p-5">
-      <h3 class="grid__content-title text-xl font-semibold mb-2">
-        {{ title }}
-      </h3>
+      <h3 class="grid__content-title text-xl font-semibold mb-2" v-html="title"></h3>
       <NuxtLink v-if="author" class="grid__content-author mb-2 text-xs text-stone-300 font-semibold" :to="`${authorlink}`">
         {{ author }}
       </NuxtLink>
-      <p v-if="excerpt" class="grid__content-excerpt mb-2 text-sm">
-        {{ excerpt }}
-      </p>
+      <div v-if="excerpt" class="grid__content-excerpt mb-2 text-sm" v-html="excerpt"></div>
       <NuxtLink v-if="slug" class="blog__readmore border-b-2 border-primary-500 inline-flex items-center"
         :to="`/${slug}`">Read more
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"

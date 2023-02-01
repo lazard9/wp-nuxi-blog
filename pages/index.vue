@@ -5,7 +5,7 @@
 import useWpApi from "~~/composables/useWpApi";
 const { data: posts, refresh, error } = await useWpApi().getPosts<any>();
 
-console.log(posts);
+// console.log(posts);
 
 
 // const { data: blogs, refresh, error } = await useWpApi().getPosts();
@@ -47,7 +47,7 @@ console.log(posts);
             :title="post.title.rendered"
             :image="post._embedded['wp:featuredmedia'][0]?.source_url"
             :imagealt="post._embedded['wp:featuredmedia'][0]?.alt_text"
-            :excerpt="post.excerpt.rendered.replace(/<[^>]*>?/gm, '')"
+            :excerpt="post.excerpt.rendered"
             :slug="post.slug"
             :author="post._embedded['author'][0]?.name"
             :authorlink="post._embedded['author'][0]?.link"
@@ -59,11 +59,11 @@ console.log(posts);
   </main>
 </template>
 
-<style>
-/* .hero__title {
+<style lang="scss">
+.hero__title {
   @apply text-4xl font-bold;
 }
 .hero__des {
   @apply text-xl;
-} */
+}
 </style>

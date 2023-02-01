@@ -10,7 +10,7 @@ const { data: posts, error: postsError } = await useWpApi().getPosts<any>(
   category.id
 );
 
-console.log(posts)
+// console.log(posts)
 
 useHead({
   title: `Archive: ${category.name}`,
@@ -34,7 +34,7 @@ useHead({
           :title="post.title.rendered"
           :image="post._embedded['wp:featuredmedia'][0]?.source_url"
           :imagealt="post._embedded['wp:featuredmedia'][0]?.alt_text"
-          :excerpt="post.excerpt.rendered.replace(/<[^>]*>?/gm, '')"
+          :excerpt="post.excerpt.rendered"
           :slug="post.slug"
           :author="post._embedded['author'][0]?.name"
           :authorlink="post._embedded['author'][0]?.link"

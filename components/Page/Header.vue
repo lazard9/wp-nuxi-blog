@@ -12,7 +12,7 @@ defineProps<{
   </section>
 </template>
 
-<style>
+<style lang="scss">
 .hero {
   @apply  px-4 py-16 bg-gray-50;
 }
